@@ -9,7 +9,7 @@
              BindingContext="{viewmodels:RegisterPageViewModel}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Üživatelské jméno"/>
+            <Label Text="Uživatelské jméno"/>
             <Entry Text="{Binding Username}"/>
             <Label Text="Heslo:"/>
             <Entry Text="{Binding Password}"/>

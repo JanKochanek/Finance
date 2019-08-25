@@ -13,8 +13,8 @@
             <Entry Text="{Binding Nazev}"/>
             <Label Text="Částka:"/>
             <Entry Text="{Binding Castka}"/>
-            <Button Text="Uložit" BackgroundColor="Green" TextColor="Black"/>
-            <Button Text="Zrušit" BackgroundColor="Black" TextColor="White"/>
+            <Button Text="Uložit" BackgroundColor="Green" TextColor="Black" Command="{Binding SavePrijem}"/>
+            <Button Text="Zrušit" BackgroundColor="Black" TextColor="White" Command="{Binding CancelPrijem}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

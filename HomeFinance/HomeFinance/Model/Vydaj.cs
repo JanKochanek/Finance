@@ -8,8 +8,6 @@ namespace HomeFinance.Model
     {
         public int Id { get; set; }
         public string Nazev { get; set; }
-        public string Datum { get; set; }
-        public string Druh { get; set; }
         public string Castka { get; set; }
 
     }

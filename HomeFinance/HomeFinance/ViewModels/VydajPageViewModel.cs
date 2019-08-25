@@ -34,8 +34,6 @@ namespace HomeFinance.ViewModels
             {
                 Id = Data.UserData.LoggedUser.Id,
                 Nazev = Nazev,
-                Datum = Datum,
-                Druh = Druh,
                 Castka = Castka
             });
             await Application.Current.MainPage.Navigation.PushModalAsync(new MainPage());

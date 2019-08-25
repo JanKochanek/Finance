@@ -9,19 +9,21 @@
              BindingContext="{viewmodels:VypisPageViewModel}">
     <ContentPage.Content>
         <StackLayout Orientation="Horizontal">
-            <ListView x:Name="VypisListView"
-                      ItemsSource="{Binding Prijmy}">
+            <ListView x:Name="VypisPrijemListView"
+                      ItemsSource="{Binding Prijmy}"
+                      BackgroundColor="LightGreen">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}"/>
+                    <DataTemplate >
+                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}" TextColor="Black" DetailColor="DarkGreen"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <ListView x:Name="VypisListView"
-                      ItemsSource="{Binding Vydaje}">
+            <ListView x:Name="VypisVydajListView"
+                      ItemsSource="{Binding Vydaje}"
+                      BackgroundColor="LightSalmon">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}"/>
+                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}" TextColor="Black" DetailColor="Red"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
