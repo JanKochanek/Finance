@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 using HomeFinance.Model;
 using HomeFinance.Views;
+using HomeFinance.Model.DataUser;
 
 namespace HomeFinance.ViewModels
 {
@@ -31,6 +32,7 @@ namespace HomeFinance.ViewModels
         {
             db.AddVydaj(new Vydaj
             {
+                Id = Data.UserData.LoggedUser.Id,
                 Nazev = Nazev,
                 Datum = Datum,
                 Druh = Druh,

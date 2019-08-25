@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using SQLite;
+using HomeFinance.Model.DataUser;
 
 namespace HomeFinance.Model
 {
@@ -44,12 +45,12 @@ namespace HomeFinance.Model
         }
         public List<Prijem> ReturnPrijem()
         {
-            var prijmy = dbConnection.Table<Prijem>().ToList();
+            var prijmy = dbConnection.Table<Prijem>().Where(prijem => prijem.Id == Data.UserData.LoggedUser.Id).ToList();
             return prijmy;
         }
         public List<Vydaj> ReturnVydaj()
         {
-            var vydaje = dbConnection.Table<Vydaj>().ToList();
+            var vydaje = dbConnection.Table<Vydaj>().Where(vydaj => vydaj.Id == Data.UserData.LoggedUser.Id).ToList();
             return vydaje;
         }
     }
