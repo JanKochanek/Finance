@@ -11,12 +11,5 @@ namespace HomeFinance.Model
         public string Druh { get; set; }
         public string Castka { get; set; }
 
-        public Vydaj(string nazev, string datum, string druh, string castka)
-        {
-            Nazev = nazev;
-            Datum = datum;
-            Druh = druh;
-            Castka = castka;
-        }
     }
 }

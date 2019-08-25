@@ -4,7 +4,11 @@ using System.Text;
 
 namespace HomeFinance.ViewModels
 {
-    class VypisPageViewModel : Abstract.AbstractViewModel
+    public class VypisPageViewModel : Abstract.AbstractViewModel
     {
+        public VypisPageViewModel()
+        {
+
+        }
     }
 }

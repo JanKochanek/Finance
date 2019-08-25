@@ -17,6 +17,8 @@ namespace HomeFinance.Model
             "userdata.db3"));
 
             dbConnection.CreateTable<User>();
+            dbConnection.CreateTable<Prijem>();
+            dbConnection.CreateTable<Vydaj>();
         }
 
         public void RegisterUserToDB(User user)
