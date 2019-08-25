@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HomeFinance.Views.RegisterPage"
+             xmlns:viewmodels="clr-namespace:HomeFinance.ViewModels"
+             BindingContext="{viewmodels:RegisterPageViewModel}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Üživatelské jméno"/>
+            <Entry Text="{Binding Username}"/>
+            <Label Text="Heslo:"/>
+            <Entry Text="{Binding Password}"/>
+            <Label Text="Emailová adresa:"/>
+            <Entry Text="{Binding Email}"/>
+            <Label Text="Číslo účtu"/>
+            <Entry Text="{Binding CisloUctu}"/>
+            <Button Text="Registrace" Command="{Binding Register}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
