@@ -8,13 +8,23 @@
              xmlns:viewmodels="clr-namespace:HomeFinance.ViewModels"
              BindingContext="{viewmodels:VypisPageViewModel}">
     <ContentPage.Content>
-        <ListView x:Name="VypisListView"
-                  ItemsSource="{Binding Prijmy}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>            
-        </ListView>        
+        <StackLayout Orientation="Horizontal">
+            <ListView x:Name="VypisListView"
+                      ItemsSource="{Binding Prijmy}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="VypisListView"
+                      ItemsSource="{Binding Vydaje}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nazev}" Detail="{Binding Castka}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

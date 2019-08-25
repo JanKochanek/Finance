@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using HomeFinance.Model;
 
 namespace HomeFinance.ViewModels
 {
@@ -10,5 +11,8 @@ namespace HomeFinance.ViewModels
         {
 
         }
+        public List<Prijem> Prijmy { get; set; }
+        public List<Vydaj> Vydaje { get; set; }
+           
     }
 }

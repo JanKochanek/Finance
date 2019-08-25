@@ -42,5 +42,15 @@ namespace HomeFinance.Model
         {
             dbConnection.Insert(vydaj);
         }
+        public List<Prijem> ReturnPrijem()
+        {
+            var prijmy = dbConnection.Table<Prijem>().ToList();
+            return prijmy;
+        }
+        public List<Vydaj> ReturnVydaj()
+        {
+            var vydaje = dbConnection.Table<Vydaj>().ToList();
+            return vydaje;
+        }
     }
 }
