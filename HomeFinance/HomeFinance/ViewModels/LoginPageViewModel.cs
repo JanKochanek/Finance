@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using HomeFinance.Model;
 using HomeFinance.Managers;
 using HomeFinance.Views;
+using HomeFinance.Model.DataUser;
 
 namespace HomeFinance.ViewModels
 {
@@ -24,13 +25,14 @@ namespace HomeFinance.ViewModels
         public string Password { get; set; }
         private async void Login_execute(object obj)
         {
-            userManager.AutenticateUser(Username, Password);
-            if (userManager.AutenticateUser(Username, Password)== null)
+            var user = userManager.AutenticateUser(Username, Password);
+            if (user == null)
             {
                 await Application.Current.MainPage.DisplayAlert("CHYBA!", "Chybné jméno nebo heslo", "Rozumím");
             }
             else
             {
+                Data.UserData.LoggedUser = user;
                 await Application.Current.MainPage.Navigation.PushModalAsync(new MainPage());
             }
 
